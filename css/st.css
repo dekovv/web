@@ -5,12 +5,11 @@
  
   }
   
-h1{
-    
-  font-family: monospace;
+h1{   
+  font-family: Tahoma;
   font-weight: 300;
-  line-height: 3.5;
-  text-decoration-style: none;
+  line-height: 3;
+  text-decoration-style: solid;
   color: white;
 }
   table {
@@ -22,7 +21,6 @@ h1{
   	border: 0px solid #2d2584;   
   }
 
-  
   table.bithday {
   	color: #141823;
   	font-family: tahoma;
