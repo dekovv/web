@@ -1,0 +1,107 @@
+  .header{
+  background-color: #3a5795;
+  height: 82px;
+  min-width: 980px;
+ 
+  }
+  
+  table {
+  	color: #141823;
+  	font-family: tahoma;
+  	padding: 8px 10px;
+  	text-decoration: none;
+  	width: 80%;
+  	border: 0px solid #2d2584;   
+  }
+
+  
+  table.bithday {
+  	color: #141823;
+  	font-family: tahoma;
+  	padding: 8px 10px;
+  	text-decoration: none;
+  	width: 80%;
+  	border: 0px solid #2d2584; 
+    background-color: antiquewhite;
+  }
+  
+  .tab  {
+  	color: #141823;
+  	font-family: tahoma;
+  	padding: 8px 10px;
+  	text-decoration: none;
+  	width: 100%;
+  	border: 0px solid #2d2584;   
+  }
+
+  .footer {
+	 
+  background-color: rgba(34, 37, 42, 0.02);
+  height: 82px;
+  min-width: 980px; 
+	  
+  }
+  
+  .center {
+	min-width: 980px;
+	background-color: -webkit-linear-gradient(white, #D3D8E8); 
+	  
+  }
+  
+  body {
+  
+  background: #fff;
+  color: #141823;
+  line-height: 1.28;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  direction: ltr;
+  unicode-bidi: embed;  
+  }
+  
+  input, select  {
+  border-color: #bdc7d8;
+  -webkit-border-radius: 5px;
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid #bdc7d8;
+    font: normal normal normal 16px/normal '.HelveticaNeueDeskInterface-Regular';
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+}
+
+.avatar{ /* селектор для класса avatar */
+    float: left; /* прижимаемся к левому краю, обтекание справа */
+    background: #fff; /* фон */
+    width: 40px; /* ширина */
+    height: 40px; /* высота */
+    padding: 1px; /* внутренние отступы(верх, право, низ, лево) */
+    border: 0px solid #999; /* граница(ширина, тип, цвет) */
+    border-radius: 50%; /*скругление равно 50 процентам от общей ширины, фактически 25 пикселей, вот и круг получили(ещё есть с префиксом -moz и -o) */
+    box-shadow: 0px 1px 1px 1px #bbb /* смещение по горизонтали, смещение по вертикали, размытие, увеличение и цвет */
+}
+.avatar img{ /* селектор для картинки, которая "внутри" класса avatar */
+    display: block; /* картинка выводится как блок, по ширине будет равен родителю(диву в котором находится) */
+    width: 100%; /* ширина 100% */
+    border: 0; /* граница нулевая */
+    margin: 0; /* внешний отступ отстутствует */
+    border-radius: 50%; /* читай выше */
+}
+
+ a {
+	color:#3a5795;
+	  
+ }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+ 
+ 
