@@ -1,5 +1,5 @@
 <?php
-	require('util.php');
+	require('../util.php');
 
 //	mysql_connect($host, $username, $password) or die(mysql_error());
 //	mysql_select_db($dbname) or die(mysql_error());

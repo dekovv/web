@@ -3,7 +3,7 @@
 
 	<?php
 
-	require('util.php');
+	require('../util.php');
 	
 	$link = mysqli_connect($host, $username, $password, $dbname) or die(mysqli_error($link));
 			
@@ -27,7 +27,7 @@
 	
 if(strlen($_FILES['foto']['name']) >0  && (isset($_REQUEST['name']))) {
 	
-		$uploaddir = './uploadimg/';
+		$uploaddir = '../uploadimg/';
 		$uploadfile = $uploaddir . basename($_FILES['foto']['name']);
 		if (file_exists($uploaddir) && is_writable($uploaddir)) {echo "<font size=1>ok</font>";} else echo "Болт вам";
 		

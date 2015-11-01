@@ -1,6 +1,6 @@
 <?php
-	require('util.php');
-	include('head.php');
+	require('../util.php');
+	include('../head.php');
 
 	$link = mysqli_connect($host, $username, $password, $dbname) or die(mysqli_error($link));
 	
@@ -106,7 +106,7 @@
 	if ($show_avatar == '1') {
 		
 		if(strlen($row[9])>0) {
-			echo('<img ' . 'src=' . '"' . $row[9]. '"' . ' class="avatar">');
+			echo('<img ' . 'src=' . '"../' . $row[9]. '"' . ' class="avatar">');
 	}	
 		}	 echo('</td>');
 	
@@ -115,9 +115,9 @@
 	echo ('<td> ');	print($row[5]); echo('</td>');
 	echo ('<td> ');	print($row[6]); echo('</td>');
 
-	echo ("<td> " . "<a href=\"customers.php\"><img width=\"15\" height=\"15\" src=\"img/list.png\"></a> " . "</td>");	
-	echo ("<td> " . "<a href=\"edit_customer.php?id=$row[0]\"><img width=\"15\" height=\"15\" src=\"img/edit.png\"></a> " . "</td>");
-	echo ("<td> " . "<a href=\"del_customer.php?id=$row[0]\"><img width=\"15\" height=\"15\" src=\"img/del.png\"></a> " . "</td>");
+	echo ("<td> " . "<a href=\"customers.php\"><img width=\"15\" height=\"15\" src=\"../img/list.png\"></a> " . "</td>");	
+	echo ("<td> " . "<a href=\"edit_customer.php?id=$row[0]\"><img width=\"15\" height=\"15\" src=\"../img/edit.png\"></a> " . "</td>");
+	echo ("<td> " . "<a href=\"del_customer.php?id=$row[0]\"><img width=\"15\" height=\"15\" src=\"../img/del.png\"></a> " . "</td>");
 	
 			echo '</tr>';
 				

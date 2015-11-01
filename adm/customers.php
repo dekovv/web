@@ -1,6 +1,6 @@
 <?php
-	require 'util.php';
-	require('head.php');
+	require '../util.php';
+	require('../head.php');
 	//Подключение к базе
 ?>	
 <center >
@@ -27,7 +27,7 @@
 	if ($show_avatar == '1') {
 		
 		if(strlen($row[9])>0) {
-			echo('<img ' . 'src=' . '"' . $row[9]. '"' . ' class="avatar">');
+			echo('<img ' . 'src=' . '"../' . $row[9]. '"' . ' class="avatar">');
 	}	
 		}	 echo('</td>');
 	
@@ -40,8 +40,8 @@
 	echo ('<td> ');	print($row[10]); echo('</td>');
 	echo ('<td> ');	print($row[11]); echo('</td>');
 
-	echo ("<td> " . "<a href=\"edit_customer.php?id=$row[0]\"><img width=\"15\" height=\"15\" src=\"img/edit.png\"></a> " . "</td>");
-	echo ("<td> " . "<a href=\"del_customer.php?id=$row[0]\"><img width=\"15\" height=\"15\" src=\"img/del.png\"></a> " . "</td>");
+	echo ("<td> " . "<a href=\"edit_customer.php?id=$row[0]\"><img width=\"15\" height=\"15\" src=\"../img/edit.png\"></a> " . "</td>");
+	echo ("<td> " . "<a href=\"del_customer.php?id=$row[0]\"><img width=\"15\" height=\"15\" src=\"../img/del.png\"></a> " . "</td>");
 	
 			echo '</tr>';
 				
@@ -85,6 +85,6 @@
 	
 	<?php
 		
-	require('footer.php');
+	require('../footer.php');
 
 ?>
