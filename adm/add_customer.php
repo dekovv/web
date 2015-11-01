@@ -28,19 +28,21 @@
 if(strlen($_FILES['foto']['name']) >0  && (isset($_REQUEST['name']))) {
 	
 		$uploaddir = '../uploadimg/';
-		$uploadfile = $uploaddir . basename($_FILES['foto']['name']);
-		if (file_exists($uploaddir) && is_writable($uploaddir)) {echo "<font size=1>ok</font>";} else echo "Болт вам";
+      	$uploadfile = $uploaddir . basename($_FILES['foto']['name']);
+   
+    if (file_exists($uploaddir) && is_writable($uploaddir)) {echo "<font size=1>ok</font>";} else echo "Болт вам";
 		
-		//echo $uploadfile;
 		if (move_uploaded_file($_FILES['foto']['tmp_name'], $uploadfile)) {
 		//echo "Файл корректен и был успешно загружен.\n"; //Проверка при ОК
+        
 		$foto = $uploadfile;
     
 		} else {
 		echo "Возможная атака с помощью файловой загрузки!\n </br>";
 	
 		}	
-		
+		$foto = substr_replace($foto, null, 0, 1);
+    
 		$query = 	"INSERT INTO `customers`(`id`, `name`, `last_name`, `otch`, `mail`, `work_phone`, `cell_phone`, `sex`, `birthdate`, `foto`, `job_title`, `company`) VALUES (NULL, '$name', '$last_name' , '$otch', '$mail', '$work_phone', '$cell_phone', '$sex', '$birthdate', '$foto', '$job_title', '$company')";
 			
 	   	mysqli_query($link, $query) or die(mysql_error($link));
@@ -48,7 +50,7 @@ if(strlen($_FILES['foto']['name']) >0  && (isset($_REQUEST['name']))) {
 		//конец редактирования		
 	}elseif (isset($_REQUEST['name'])) { 
 		
-		$foto = "./uploadimg/404.jpg";
+		$foto = "../uploadimg/404.jpg";
 		//Если нет картинки заполняем без нее
 	$query = 	"INSERT INTO `customers`(`id`, `name`, `last_name`, `otch`, `mail`, `work_phone`, `cell_phone`, `sex`, `birthdate`, `foto`, `job_title`, `company`) VALUES (NULL, '$name', '$last_name' , '$otch', '$mail', '$work_phone', '$cell_phone', '$sex', '$birthdate', '$foto', '$job_title', '$company')";	//	print($query);
 	

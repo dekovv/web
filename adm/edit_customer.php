@@ -21,7 +21,7 @@
 	$company = $_REQUEST['company'];
 	
 	
-		$uploaddir = './uploadimg/';
+		$uploaddir = '../uploadimg/';
 		$uploadfile = $uploaddir . basename($_FILES['foto']['name']);
 		if (file_exists($uploaddir) && is_writable($uploaddir)) {echo "<font size=1>ok</font>";} else echo "Болт вам";
 		
@@ -29,6 +29,7 @@
 		if (move_uploaded_file($_FILES['foto']['tmp_name'], $uploadfile)) {
 		//echo "Файл корректен и был успешно загружен.\n"; //Проверка при ОК
 		$foto = $uploadfile;
+        $foto = substr_replace($foto, null, 0, 1);
     
 		} else {
 		echo "Возможная атака с помощью файловой загрузки!\n </br>";
