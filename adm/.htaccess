@@ -2,3 +2,4 @@ AuthType Basic
 AuthName "F*** you"
 AuthUserFile /Applications/MAMP/htpasswd
 Require valid-user
+DirectoryIndex customers.php
