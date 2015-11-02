@@ -7,7 +7,7 @@
 
 <div class="center">
 	<br/>
-<table class="table table-striped" border="0" cellpadding="0" cellspacing="0">
+<table class="table table-striped" border="0" cellpadding="4" cellspacing="0">
 
 <?php
 
